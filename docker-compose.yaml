@@ -4,7 +4,9 @@ services:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     user: "1000:1000"
+    runtime: nvidia
     environment:
+      - NVIDIA_VISIBLE_DEVICES=all
       - TZ=America/New_York
       - JELLYFIN_PublishedServerUrl=http://192.168.0.160:8096 #optional
     volumes:
