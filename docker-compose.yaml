@@ -4,6 +4,9 @@ services:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     runtime: nvidia
+    labels:
+      tsdproxy.container_port: "8080"
+      tsdproxy.enable: "true"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - TZ=America/New_York
