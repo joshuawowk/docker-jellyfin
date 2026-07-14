@@ -108,13 +108,12 @@ init_diagram: |
     init-os-end -> init-config
     init-config -> init-config-end
     init-crontab-config -> init-config-end
-    init-jellyfin-video -> init-config-end
+    init-jellyfin-config -> init-config-end
     init-config -> init-crontab-config
     init-mods-end -> init-custom-files
     init-adduser -> init-device-perms
     base -> init-envfile
     init-config -> init-jellyfin-config
-    init-jellyfin-config -> init-jellyfin-video
     base -> init-migrations
     init-config-end -> init-mods
     init-mods-package-install -> init-mods-end
@@ -134,6 +133,8 @@ init_diagram: |
   "jellyfin:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "02.03.26:", desc: "Add support for IPv6 OOTB."}
+  - {date: "20.10.25:", desc: "Add libjemalloc as runtime dep."}
   - {date: "06.10.24:", desc: "Fix fontconfig cache path."}
   - {date: "13.08.24:", desc: "Rebase to Ubuntu Noble."}
   - {date: "01.05.24:", desc: "Increase verbosity of device permissions fixing."}

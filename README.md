@@ -131,7 +131,7 @@ Best effort is made to install tools to allow mounting in /dev/dri on Arm device
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
 
 >[!NOTE]
->Unless a parameter is flaged as 'optional', it is *mandatory* and a value must be provided.
+>Unless a parameter is flagged as 'optional', it is *mandatory* and a value must be provided.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
@@ -373,6 +373,8 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **02.03.26:** - Add support for IPv6 OOTB.
+* **20.10.25:** - Add libjemalloc as runtime dep.
 * **06.10.24:** - Fix fontconfig cache path.
 * **13.08.24:** - Rebase to Ubuntu Noble.
 * **01.05.24:** - Increase verbosity of device permissions fixing.
