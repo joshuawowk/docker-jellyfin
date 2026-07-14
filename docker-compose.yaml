@@ -7,6 +7,11 @@ services:
     labels:
       tsdproxy.container_port: "8080"
       tsdproxy.enable: "true"
+      homepage.group: "Media"
+      homepage.name: "Jellyfin"
+      homepage.icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg"
+      homepage.href: "http://192.168.0.160:8096/"
+      homepage.description: "Jellyfin - The Free Software Media System"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - TZ=America/New_York
